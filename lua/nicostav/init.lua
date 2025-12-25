@@ -8,6 +8,7 @@ require("nicostav.lazy_init")
 vim.g.have_nerd_font = true
 
 -- Relative line numbers
+vim.o.number = true
 vim.o.relativenumber = true
 
 -- Decrease update time
@@ -34,4 +35,5 @@ vim.keymap.set("n", "<leader>ge", function()
     "}",
   }
   vim.api.nvim_put(lines, "l", true, true)
+
 end, { desc = "Insert Go if err != nil block" }) 
