@@ -23,17 +23,14 @@ vim.o.scrolloff = 10
 -- Set coloscheme at the end
 vim.cmd.colorscheme 'tokyonight-night'
 
---
--- GO Lang specific Keybinds
---
+-- Tab Settings
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.smartindent = true
 
--- If Err Nil Block
-vim.keymap.set("n", "<leader>ge", function()
-  local lines = {
-    "if err != nil {",
-    "\treturn err",
-    "}",
-  }
-  vim.api.nvim_put(lines, "l", true, true)
-
-end, { desc = "Insert Go if err != nil block" }) 
+-- Netrw Settings
+vim.g.netrw_browse_split = 0
+vim.g.netrw_banner = 0
+vim.g.netrw_winsize = 25
